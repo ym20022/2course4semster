@@ -46,7 +46,7 @@ public class MainApp {
         System.out.print("Choose option: ");
 
         int choice = scanner.nextInt();
-        scanner.nextLine(); // consume newline
+        scanner.nextLine(); 
 
         switch (choice) {
             case 1 -> login();
@@ -80,7 +80,7 @@ public class MainApp {
         System.out.print("Enter password: ");
         String password = scanner.nextLine();
 
-        // In a real app, you would parse the birthDateStr to Date
+        
         userController.registerUser(fullName, new Date(), snils, login, password);
         System.out.println("Registration successful! Please login.");
     }
@@ -98,8 +98,7 @@ public class MainApp {
         System.out.print("Choose option: ");
 
         int choice = scanner.nextInt();
-        scanner.nextLine(); // consume newline
-
+        scanner.nextLine(); 
         switch (choice) {
             case 1 -> adminController.viewAllUsers().forEach(System.out::println);
             case 2 -> {
@@ -107,7 +106,7 @@ public class MainApp {
                 int userId = scanner.nextInt();
                 adminController.deleteUser(userId);
             }
-            // Implement other cases similarly
+            
             case 8 -> currentUser = null;
             default -> System.out.println("Invalid option!");
         }
@@ -122,10 +121,10 @@ public class MainApp {
         System.out.print("Choose option: ");
 
         int choice = scanner.nextInt();
-        scanner.nextLine(); // consume newline
+        scanner.nextLine(); 
 
         switch (choice) {
-            // Implement CEC menu options
+            
             case 4 -> currentUser = null;
             default -> System.out.println("Invalid option!");
         }
@@ -140,10 +139,9 @@ public class MainApp {
         System.out.print("Choose option: ");
 
         int choice = scanner.nextInt();
-        scanner.nextLine(); // consume newline
-
+        scanner.nextLine();
         switch (choice) {
-            // Implement candidate menu options
+           
             case 4 -> currentUser = null;
             default -> System.out.println("Invalid option!");
         }
@@ -159,10 +157,10 @@ public class MainApp {
         System.out.print("Choose option: ");
 
         int choice = scanner.nextInt();
-        scanner.nextLine(); // consume newline
+        scanner.nextLine(); 
 
         switch (choice) {
-            // Implement user menu options
+            
             case 5 -> currentUser = null;
             default -> System.out.println("Invalid option!");
         }
