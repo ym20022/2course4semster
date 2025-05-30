@@ -10,12 +10,12 @@ public class CalculatorModel {
     }
 
     private void validateExpression(String expression) {
-        // Check for empty expression
+        
         if (expression == null || expression.trim().isEmpty()) {
             throw new IllegalArgumentException("Пустое выражение");
         }
 
-        // Check balanced parentheses
+        
         Stack<Character> stack = new Stack<>();
         for (char c : expression.toCharArray()) {
             if (c == '(') {
@@ -31,7 +31,7 @@ public class CalculatorModel {
             throw new IllegalArgumentException("Несбалансированные скобки");
         }
 
-        // Check for invalid characters
+        
         if (!expression.matches("^[0-9+\\-*/.^!()elogxps ]+$")) {
             throw new IllegalArgumentException("Недопустимые символы в выражении");
         }
@@ -49,7 +49,7 @@ public class CalculatorModel {
             char c = expression.charAt(i);
 
             if (Character.isDigit(c) || c == '.') {
-                // Read whole number
+                
                 while (i < expression.length() &&
                         (Character.isDigit(expression.charAt(i)) || expression.charAt(i) == '.')) {
                     output.append(expression.charAt(i++));
@@ -57,7 +57,7 @@ public class CalculatorModel {
                 output.append(' ');
                 continue;
             } else if (Character.isLetter(c)) {
-                // Handle functions (log, exp)
+               
                 StringBuilder func = new StringBuilder();
                 while (i < expression.length() && Character.isLetter(expression.charAt(i))) {
                     func.append(expression.charAt(i++));
@@ -71,7 +71,7 @@ public class CalculatorModel {
                 } else {
                     throw new IllegalArgumentException("Неизвестная функция: " + function);
                 }
-                // Skip opening parenthesis
+              
                 if (i < expression.length() && expression.charAt(i) == '(') {
                     i++;
                 }
@@ -88,7 +88,7 @@ public class CalculatorModel {
                     operatorStack.pop();
                 }
             } else if (isOperator(c)) {
-                // Handle unary minus
+               
                 if (c == '-' && (i == 0 || expression.charAt(i-1) == '(' || isOperator(expression.charAt(i-1)))) {
                     output.append("0 "); // Push 0 before unary minus
                 }
