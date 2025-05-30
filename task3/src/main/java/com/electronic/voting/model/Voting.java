@@ -11,7 +11,7 @@ public class Voting {
     private List<Candidate> candidates;
     private CEC createdBy;
 
-    // Constructors, getters, and setters
+    
     public Voting() {}
 
     public Voting(String title, Date startDate, Date endDate, CEC createdBy) {
@@ -21,7 +21,7 @@ public class Voting {
         this.createdBy = createdBy;
     }
 
-    // Getters and setters
+    
     public int getVotingId() {
         return votingId;
     }
