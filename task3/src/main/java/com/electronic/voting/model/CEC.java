@@ -4,14 +4,14 @@ public class CEC {
     private int cecId;
     private User user;
 
-    // Constructors, getters, and setters
+    
     public CEC() {}
 
     public CEC(User user) {
         this.user = user;
     }
 
-    // Getters and setters
+    
     public int getCecId() {
         return cecId;
     }
