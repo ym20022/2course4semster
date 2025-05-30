@@ -18,7 +18,7 @@ public class CandidateController {
     public void updateCandidateInfo(Candidate candidate, String bio, String program) {
         candidate.setBio(bio);
         candidate.setProgram(program);
-        // In a real application, you would save this to a database
+        
     }
 
     public List<Voting> getParticipatedVotings(int candidateId) {
