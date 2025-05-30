@@ -6,7 +6,7 @@ public class Candidate {
     private String bio;
     private String program;
 
-    // Constructors, getters, and setters
+    
     public Candidate() {}
 
     public Candidate(User user, String bio, String program) {
@@ -15,7 +15,7 @@ public class Candidate {
         this.program = program;
     }
 
-    // Getters and setters
+    
     public int getCandidateId() {
         return candidateId;
     }
