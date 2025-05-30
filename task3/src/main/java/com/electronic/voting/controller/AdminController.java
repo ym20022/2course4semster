@@ -7,7 +7,7 @@ import com.electronic.voting.service.UserService;
 import com.electronic.voting.service.CECService;
 import com.electronic.voting.service.CandidateService;
 import java.util.List;
-import com.electronic.voting.model.Role;  // Add this import
+import com.electronic.voting.model.Role;  
 import com.electronic.voting.model.User;
 import com.electronic.voting.model.CEC;
 public class AdminController {
