@@ -11,7 +11,7 @@ public class User {
     private String password;
     private Role role;
 
-    // Constructors, getters, and setters
+    
     public User() {}
 
     public User(String fullName, Date birthDate, String snils, String login, String password, Role role) {
@@ -23,7 +23,7 @@ public class User {
         this.role = role;
     }
 
-    // Getters and setters for all fields
+   
     public int getUserId() {
         return userId;
     }
